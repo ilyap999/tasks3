@@ -1,6 +1,6 @@
 // Задача №1 - «Только что»
 fun main() {
-    val numberOfSeconds = 2462
+    val numberOfSeconds = 39650
     println("был(а) ${secondsToString(numberOfSeconds)}")
 }
 
@@ -21,6 +21,7 @@ fun secondsToString(numberOfSeconds : Int) : String {
 }
 
 fun correctEndingMin(numberOfMin : Int) : String {
+    if (numberOfMin == 11) return "$numberOfMin минут"
     var lastDigit = numberOfMin % 10
     when (lastDigit) {
         1 -> return "$numberOfMin минуту"
@@ -30,6 +31,7 @@ fun correctEndingMin(numberOfMin : Int) : String {
 }
 
 fun correctEndingHour(numberOfHour : Int) : String {
+    if (numberOfHour == 11) return "$numberOfHour часов"
     var lastDigit = numberOfHour % 10
     when (lastDigit) {
         1 -> return "$numberOfHour час"
